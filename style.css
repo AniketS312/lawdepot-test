@@ -1,0 +1,238 @@
+/* CSS Variables */
+:root {
+    --header-height: 10rem;
+    --gray-color: #dadada;
+    --green-color: #64AD7D;
+}
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.green {
+    color: var(--green-color)
+}
+
+body {
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+
+/* Header section */
+.header {
+    background-color: #4d4d4d;
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.header h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    font-weight: 200;
+}  
+
+/* End of header section */
+
+/* Main section */
+
+.main { 
+   min-height: calc(100vh - var(--header-height));
+}
+
+.access-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 50%;
+    margin: 2rem 0;
+}
+
+.access-options__container {
+    border-radius: 50px;
+    margin: 0 .5rem 0 .5rem;
+
+}
+
+.access-options__container button {
+    font-size: 1.2rem;
+    text-decoration: uppercase;
+    border:none;
+    background-color: #dadada;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+
+.access-options button.active {
+    background-color: var(--green-color);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.main-chart {
+    height: inherit;
+    width: 80%;
+    margin: auto;
+} 
+
+.main-chart__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto
+
+} 
+
+.main-chart__table {
+
+    width: 50%;
+
+}
+
+.main-chart__container table {
+    table-layout: fixed;
+    border-collapse: seperate;
+    border-spacing: 16px 0;
+}
+
+table th,
+table td {
+        border: 1px solid #ccc;
+
+} 
+
+.main-chart__table th div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.main-chart__table th h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 2rem 0;
+
+}
+
+.main-chart__table th p {
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.main-chart__table th span {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(68, 68, 68);
+}
+
+.main-chart__table th button {
+    margin-top: 2rem;
+    background-color: var(--gray-color);
+    color: gray;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    margin-bottom: 2rem;
+}
+
+.main-chart__table th button.primary-button {
+    margin-top: 2rem;
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12);
+    margin-bottom: 2rem;
+}
+
+.comparison-table__body tr td {
+    padding: 1.4rem;
+    font-size: .8rem;
+    font-weight: 500;
+}
+tr td span {
+    color: var(--green-color)
+}
+
+.main-side__container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+}
+
+
+
+.main-side__content {
+    width: 100%;
+    display: flex; 
+    align-items: center;
+}
+.main-side__content i {
+    font-size: 2rem;
+    color: var(--green-color);
+    margin: 1rem
+}
+
+.main-side__content p {
+    font-weight: 500;
+justify-self: center;}
+
+/* End of main section */
+
+/* highlighting main plan */
+.primary-plan {
+    position: relative;
+
+}
+
+.primary-plan::before {
+content: "Most popular";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  background: var(--green-color);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white
+}
+
+tr th:last-child,
+tr td:last-child {
+    
+}
+
+/*end of highlighting main plan */
